@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>friendZone | A Place To Meet friendZ</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round|Fredoka+One" rel="stylesheet">
+<style>
+    .logoleft {
+      font-family: 'Varela Round', sans-serif;
+    }
+    .logoright {
+      font-family: 'Fredoka One', cursive;
+    }
+    .bgstyle {
+        height: 94vh;
+        width: 100%;
+        min-height: 350px;
+        background: no-repeat center center ;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+</style>
+
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand text-primary logoleft" href="/">friend<span class="text-warning logoright">Zone</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="api/friends">API View</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About The Developer</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- EXPERIMENTAL -->
+<div class="row mt-5 pt-5 bgstyle" style="background-image: url('https://source.unsplash.com/S_VbdMTsdiA/1920x1080');">
+<div class="col-md-3"></div>
+<div class="col-md-6">
+<div id="friendSurvey" class="carousel slide" data-interval="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <div class="card">
+            <div class="card-header logoleft text-primary text-center">
+                <h3>Tell Us <span class="logoright text-warning">About You</span></h3>
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="form-group logoright">
+                    <label for="friendName">Your Name</label>
+                    <input type="text" class="form-control logoleft" id="friendName" placeholder="Full Name or Nickname">
+                </div>
+                <div class="form-group logoright">
+                    <label for="picURL">Your Photo</label>
+                    <input type="text" class="form-control logoleft" id="picURL" placeholder="Insert Image Link Here">
+                </div>
+              </form>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary btn-block nextPlz">START <span class="logoleft text-warning">friend</span><span class="logoright text-warning">Quiz</span></a>
+            </div>
+        </div>
+      <!-- <img class="d-block w-100" src="https://source.unsplash.com/nF8xhLMmg0c/1920x1080" alt="First slide"> -->
+    </div>
+<!-- QUESTION 1 -->
+    <div class="carousel-item">
+      <div class="card">
+        <div class="card-header logoleft text-primary text-center">
+            <h4 class="logoright text-muted">Which of these colors give you warmth and comfort?</span></h4>
+        </div>
+        <div class="card-body">
+            <form id="survey01">
+                <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyUno" value="1">Dollar Green</button>
+                <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyUno" value="2">Aquamarine</button>
+                <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyUno" value="3">Ripe Peach</button>
+                <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyUno" value="4">Lilac</button>
+                <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyUno" value="5">Ferrari Yellow</button>                    
+            </form>
+        </div>
+      </div>
+    </div>
+<!-- QUESTION 2 -->
+    <div class="carousel-item">
+      <div class="card">
+        <div class="card-header logoleft text-primary text-center">
+            <h3 class="logoright text-muted">Given a sizeable budget, what is your ideal getaway?</span></h3>
+        </div>
+        <div class="card-body">
+            <form id="survey02">
+                <button type="button" class="btn btn-outline-primary btn-lg btn-block gatherData surveyDos" value="1">Invest the money instead and watch it grow baby!</button>
+                <button type="button" class="btn btn-outline-primary btn-lg btn-block gatherData surveyDos" value="2">Join an expedition to Antarctica</button>
+                <button type="button" class="btn btn-outline-primary btn-lg btn-block gatherData surveyDos" value="3">Do a top restaurant and wine tour of Europe</button>
+                <button type="button" class="btn btn-outline-primary btn-lg btn-block gatherData surveyDos" value="4">Shut down a Theme Park only for yourself and your buddies</button>
+                <button type="button" class="btn btn-outline-primary btn-lg btn-block gatherData surveyDos" value="5">Luxury Private Island Escape</button>                    
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="col-md-3"></div>
+</div>
+  <!-- LATEST JQUERY AND BOOTSTRAP SCRIPT -->
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+  $('.nextPlz').on('click', function() {
+      $('.carousel').carousel('next');
+  });
+
+// $.get('/api/friends', function(err, data) {
+//     console.log(`got data: ${data}`);
+// })
+
+  $(".gatherData").on("click", function(event) {
+      console.log("CONCLUDING TRANSMISSION");
+      event.preventDefault();
+      alert("Thanks for the info, were processing your request");
+
+      let scorez = [];
+      // for (let i=1; i<=2; i++) {
+      //   if (!isNaN(parseInt($(`#survey0${i} button:selected`).attr('value'))))
+      //   scorez.push(parseInt($(`#survey0${i} button:selected`).attr('value')));
+      // }
+
+      let newFriend = {
+        "name": $("#friendName").val().trim(),
+        "photo": $("#picURL").val().trim(),
+        "scores": [//scorez
+            $(".surveyUno").attr('value'),
+            $(".surveyDos").attr('value')
+        ]
+            // parseInt($("#surveySays03 option:selected").attr('value')),
+            // parseInt($("#surveySays04 option:selected").attr('value')),
+            // parseInt($("#surveySays05 option:selected").attr('value'))
+      };
+  
+
+  console.log(`A new friend is created: ${newFriend}`);
+  alert(`A new friend is created: ${newFriend}`);
+
+  $.post("/api/friends", newFriend, 
+  function(data) {
+
+    if (data) {
+        alert("Yazzz! You are on the way to getting friendZoned!");
+    } 
+    // else {
+    //     alert("Sorry, something went wrong.");
+    // }
+    // $("#friendName").val("");
+    // $("#picURL").val("");
+  });
+});
+
+</script>
+
+</body>
+</html>

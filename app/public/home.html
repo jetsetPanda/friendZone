@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>friendZone | A Place To Meet friendZ</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round|Fredoka+One" rel="stylesheet">
+<style>
+    .logoleft {
+      font-family: 'Varela Round', sans-serif;
+    }
+    .logoright {
+      font-family: 'Fredoka One', cursive;
+    }
+    .logo-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 90%;
+        left: 8%;
+        right: 85%;
+        text-align: center;
+    }
+    .logo-overlay:before {
+        content: ' ';
+        display: block;
+        /* adjust 'height' to position overlay content vertically */
+        height: 50%;
+    }
+    .carousel-control-prev-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    }
+    .carousel-control-next-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    }
+    .carousel-item {
+        height: 100vh;
+        min-height: 350px;
+        background: no-repeat center center scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    a { 
+      color: white;  
+      text-decoration: none;
+    }
+    a.linkblue:hover { 
+      color: rgb(57, 147, 250);
+      text-decoration: none;
+    }
+    a.linkorange:hover {
+      color: rgb(255, 208, 0);
+      text-decoration: none;
+    }
+</style>
+</head>
+
+<body>
+  <header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/nF8xhLMmg0c/1920x1080')">
+          <div class="logo-overlay">
+            <h1><span class="text-primary logoleft">friend</span><span class="text-warning logoright">Zone</span></h1>
+          </div>
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="display-4">Life is More Fun With <span class="logoleft">Friends</span></h2>
+            <a href="/survey" class="lead linkorange">Get matched with interesting people who share your passions.</a>
+          </div>
+        </div>
+        <!-- Slide Two - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('https://source.unsplash.com/BIk2ANMmNz4/1920x1080')">
+          <div class="logo-overlay">
+              <h1><span class="text-primary logoleft">friend</span><span class="text-warning logoright">Zone</span></h1>
+          </div>
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="display-4">A Place for Meeting Lifelong <span class="logoleft">Friends</span></h2>
+            <a href="/survey" class="lead linkblue">Complete this quick survey to be <span class="logoleft">friend</span><span class="logoright">Zoned</span> with unique people!</a>
+          </div>
+        </div>
+        <!-- Slide Three - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('https://source.unsplash.com/Pw5uvsFcGF4/1920x1080')">
+          <div class="logo-overlay">
+            <h1><span class="text-primary logoleft">friend</span><span class="text-warning logoright">Zone</span></h1>
+          </div>
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="display-4">Get in the <span class="text-primary logoleft">friend</span><span class="text-warning logoright">Zone</span></h2>
+            <a href="/survey" class="getinthere3 btn btn-lg btn-outline-warning text-primary logoright">Lets Get Started</a>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+    </div>
+  </header>
+  
+  <!-- Page Content
+  <section class="py-5">
+    <div class="container">
+      <h1 class="display-4">Full Page Image Slider</h1>
+      <p class="lead">The background images for the slider are set directly in the HTML using inline CSS. The images in this snippet are from <a href="https://unsplash.com">Unsplash</a>, taken by <a href="https://unsplash.com/@joannakosinska">Joanna Kosinska</a>!</p>
+    </div>
+  </section> -->
+
+<!-- LATEST JQUERY AND BOOTSTRAP SCRIPT -->
+<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
