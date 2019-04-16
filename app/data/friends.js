@@ -2,7 +2,7 @@
 let friendArray = [
     {
         "name": "Omar Tigerblood",
-        "photo": "https://hips.hearstapps.com/esq.h-cdn.co/assets/cm/15/05/54cb8ab4c209b_-_esq-charlie-sheen-hot-shots-030211-lg.jpg",
+        "photo": "https://hips.hearstapps.com/esq.h-cdn.co/assets/cm///54cb8ab4c209b_-_esq-charlie-sheen-hot-shots-030211-lg.jpg",
         "scores": [
             5,
             3,

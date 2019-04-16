@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round|Fredoka+One" rel="stylesheet">
-<style>
+<style> 
+    .card {
+      background-color: rgba(0, 0, 0, 0.205);
+    }
+    .modal-content {
+      background-color: rgba(0, 0, 0, 0.425);                                                                                        
+    }
     .logoleft {
       font-family: 'Varela Round', sans-serif;
     }
@@ -15,7 +21,7 @@
       font-family: 'Fredoka One', cursive;
     }
     .bgstyle {
-        height: 94vh;
+        height: 93.5vh;
         width: 100%;
         min-height: 350px;
         background: no-repeat center center ;
@@ -32,7 +38,7 @@
 <body>
 
 <!-- Navigation -->
- <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+ <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
       <a class="navbar-brand text-primary logoleft" href="/">friend<span class="text-warning logoright">Zone</span></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,190 +67,264 @@
 
 <!-- EXPERIMENTAL -->
 <div class="row mt-5 pt-5 bgstyle" style="background-image: url('https://source.unsplash.com/S_VbdMTsdiA/1920x1080');">
-<div class="col-md-3"></div>
-<div class="col-md-6">
-<div id="friendSurvey" class="carousel slide" data-interval="false">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-        <div class="card">
-            <div class="card-header logoleft text-primary text-center">
-                <h3>Tell Us <span class="logoright text-warning">About You</span></h3>
+<!-- <div class="row mt-5 pt-5 bgstyle" style="background-image: url('https://source.unsplash.com/mA_lknGurfc/1920x1080');"> -->
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+      <div id="friendSurvey" class="carousel slide" data-interval="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+              <div class="card">
+                  <div class="card-header logoleft text-primary text-center">
+                      <h3>Tell Us <span class="logoright text-warning">About You</span></h3>
+                  </div>
+                  <div class="card-body text-light">
+                    <form>
+                      <div class="form-group logoright">
+                          <label for="friendName">Your Name</label>
+                          <input type="text" class="form-control logoleft" id="friendName" placeholder="Full Name or Nickname">
+                      </div>
+                      <div class="form-group logoright">
+                          <label for="picURL">Your Photo</label>
+                          <input type="text" class="form-control logoleft" id="picURL" placeholder="Insert Image Link Here">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="card-footer">
+                    <a href="#" class="btn btn-primary btn-block nextPls">START <span class="logoleft text-warning">friend</span><span class="logoright text-warning">Quiz</span></a>
+                  </div>
+              </div>
+            <!-- <img class="d-block w-100" src="https://source.unsplash.com/nF8xhLMmg0c/1920x1080" alt="First slide"> -->
+          </div>
+      <!-- QUESTION 1 -->
+          <div class="carousel-item">
+            <div class="card logoright">
+              <div class="card-header text-center">
+                  <h4 class=" text-light">Which color gives you a warm feeling?</span></h4>
+              </div>
+              <div class="card-body">
+                  <form id="survey01">
+                      <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="1">Dollar Green</button>
+                      <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="2">Aquamarine</button>
+                      <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="3">Ripe Peach</button>
+                      <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="4">Lilac</button>
+                      <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="5">Ferrari Yellow</button>                    
+                  </form>
+              </div>
             </div>
-            <div class="card-body">
-              <form>
-                <div class="form-group logoright">
-                    <label for="friendName">Your Name</label>
-                    <input type="text" class="form-control logoleft" id="friendName" placeholder="Full Name or Nickname">
+          </div>
+
+
+      <!-- QUESTION 2 -->
+          <div class="carousel-item">
+            <div class="card logoright">
+                <div class="card-header text-center">
+                  <h3 class=" text-light">Given a sizeable budget, what is your ideal getaway?</span></h3>
+              </div>
+              <div class="card-body">
+                  <form id="survey02">
+                      <button type="button" class="btn btn-outline-info btn-lg btn-block nextPlz surveyQ " value="1">Invest the money instead and watch it grow baby!</button>
+                      <button type="button" class="btn btn-outline-info btn-lg btn-block nextPlz surveyQ " value="2">Join an expedition to Antarctica</button>
+                      <button type="button" class="btn btn-outline-info btn-lg btn-block nextPlz surveyQ " value="3">Do a top restaurant and wine tour of Europe</button>
+                      <button type="button" class="btn btn-outline-info btn-lg btn-block nextPlz surveyQ " value="4">Close down a theme park for you and yours</button>
+                      <button type="button" class="btn btn-outline-info btn-lg btn-block nextPlz surveyQ " value="5">Luxury Private Island Escape</button>                    
+                  </form>
+              </div>
+            </div>
+          </div>
+      <!-- QUESTION 3  -->
+          <div class="carousel-item">
+            <div class="card logoright">
+                <div class="card-header text-center">
+                  <h4 class=" text-light">If you only have these pet choices on your next home, which one will it be?</span></h4>
+              </div>
+              <div class="card-body">
+                  <form id="survey03">
+                      <button type="button" class="btn btn-outline-success btn-lg btn-block nextPlz surveyQ " value="1">Never had pets, never will</button>
+                      <button type="button" class="btn btn-outline-success btn-lg btn-block nextPlz surveyQ " value="2">Sphynx (hairless) Cat</button>
+                      <button type="button" class="btn btn-outline-success btn-lg btn-block nextPlz surveyQ " value="3">Hedgehog</button>
+                      <button type="button" class="btn btn-outline-success btn-lg btn-block nextPlz surveyQ " value="4">Afghan Hound</button>
+                      <button type="button" class="btn btn-outline-success btn-lg btn-block nextPlz surveyQ " value="5">Tarantula or Any Insect</button>                    
+                  </form>
+              </div>
+            </div>
+          </div>
+      <!-- QUESTION 4 -->
+          <div class="carousel-item">
+            <div class="card logoright">
+                <div class="card-header text-center">
+                  <h4 class=" text-light">Which of these prominent figures would you have dinner with?</span></h4>
+              </div>
+              <div class="card-body">
+                  <form id="survey04">
+                      <button type="button" class="btn btn-outline-danger btn-lg btn-block nextPlz surveyQ " value="1">Jared Kushner</button>
+                      <button type="button" class="btn btn-outline-danger btn-lg btn-block nextPlz surveyQ " value="2">Queen Elizabeth II</button>
+                      <button type="button" class="btn btn-outline-danger btn-lg btn-block nextPlz surveyQ " value="3">Dalai Lama</button>
+                      <button type="button" class="btn btn-outline-danger btn-lg btn-block nextPlz surveyQ " value="4">Maya Angelou</button>
+                      <button type="button" class="btn btn-outline-danger btn-lg btn-block nextPlz surveyQ " value="5">All of The Backstreet Boys</button>                    
+                  </form>
+              </div>
+            </div>
+          </div>
+      <!-- QUESTION 5 -->
+          <div class="carousel-item">
+            <div class="card logoright">
+                <div class="card-header text-center">
+                  <h4 class=" text-light">What aspect of yourself do you feel most grateful for?</span></h4>
+              </div>
+              <div class="card-body">
+                  <form id="survey05">
+                      <button type="button" class="btn btn-outline-warning btn-lg btn-block gatherData surveyQ " value="1">My well endowed intellect</button>
+                      <button type="button" class="btn btn-outline-warning btn-lg btn-block gatherData surveyQ " value="2">My strong faith and belief</button>
+                      <button type="button" class="btn btn-outline-warning btn-lg btn-block gatherData surveyQ " value="3">My loyal and dependable pet/s</button>
+                      <button type="button" class="btn btn-outline-warning btn-lg btn-block gatherData surveyQ " value="4">My great circle of friends</button>
+                      <button type="button" class="btn btn-outline-warning btn-lg btn-block gatherData surveyQ " value="5">My just being alive every day</button>                    
+                  </form>
+              </div>
+            </div>
+          </div>
+<!-- LOADING SCREEN -->
+          <div class="carousel-item">
+            <div class="card logoright">
+              <div class="card-header text-left">
+                <h4 class="text-light">Thanks for your input!</span></h4>
+              </div>
+              <div class="card-body text-center">
+                <div>
+                  <h1 class="text-white">Getting Your <span class="text-primary">Friend </span><span class="text-warning">Matches</span></h1>
+                  <h7 class="text-muted">Please be patient, we're processing your responses to give you great matches!</h7>
                 </div>
-                <div class="form-group logoright">
-                    <label for="picURL">Your Photo</label>
-                    <input type="text" class="form-control logoleft" id="picURL" placeholder="Insert Image Link Here">
+                <div class="spinner-border text-primary text-center" style="width: 5rem; height: 5rem;" role="status">
+                  <span class="sr-only">Loading...</span>
                 </div>
-              </form>
+                
+                <div class="spinner-grow text-warning text-center" style="width: 5rem; height: 5rem;" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>        
+
+              </div>
             </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary btn-block nextPlz">START <span class="logoleft text-warning">friend</span><span class="logoright text-warning">Quiz</span></a>
-            </div>
-        </div>
-      <!-- <img class="d-block w-100" src="https://source.unsplash.com/nF8xhLMmg0c/1920x1080" alt="First slide"> -->
-    </div>
-<!-- QUESTION 1 -->
-    <div class="carousel-item">
-      <div class="card">
-        <div class="card-header logoleft text-primary text-center">
-            <h4 class="logoright text-muted">Which of these colors give you warmth and comfort?</span></h4>
-        </div>
-        <div class="card-body">
-            <form id="survey01">
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="1">Dollar Green</button>
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="2">Aquamarine</button>
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="3">Ripe Peach</button>
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="4">Lilac</button>
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="5">Ferrari Yellow</button>                    
-            </form>
+          </div>
+
         </div>
       </div>
-    </div>
-
-
-<!-- QUESTION 2 -->
-    <div class="carousel-item">
-      <div class="card">
-        <div class="card-header logoleft text-primary text-center">
-            <h3 class="logoright text-muted">Given a sizeable budget, what is your ideal getaway?</span></h3>
-        </div>
-        <div class="card-body">
-            <form id="survey02">
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="1">Invest the money instead and watch it grow baby!</button>
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="2">Join an expedition to Antarctica</button>
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="3">Do a top restaurant and wine tour of Europe</button>
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="4">Shut down a Theme Park only for yourself and your buddies</button>
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="5">Luxury Private Island Escape</button>                    
-            </form>
-        </div>
-      </div>
-    </div>
-<!-- QUESTION 3  -->
-    <div class="carousel-item">
-      <div class="card">
-        <div class="card-header logoleft text-primary text-center">
-            <h4 class="logoright text-muted">If you only have these pet choices on your next home, which one will it be?</span></h4>
-        </div>
-        <div class="card-body">
-            <form id="survey03">
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="1">Never had pets, never will</button>
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="2">Sphynx (hairless) Cat</button>
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="3">Hedgehog</button>
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="4">Afghan Hound</button>
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="5">Tarantula or Any Insect</button>                    
-            </form>
-        </div>
-      </div>
-    </div>
-<!-- QUESTION 4 -->
-    <div class="carousel-item">
-      <div class="card">
-        <div class="card-header logoleft text-primary text-center">
-            <h4 class="logoright text-muted">Which of these prominent figures would you have dinner with?</span></h4>
-        </div>
-        <div class="card-body">
-            <form id="survey04">
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="1">Jared Kushner</button>
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="2">Queen Elizabeth II</button>
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="3">Dalai Lama</button>
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="4">Maya Angelou</button>
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="5">All of The Backstreet Boys</button>                    
-            </form>
-        </div>
-      </div>
-    </div>
-<!-- QUESTION 5 -->
-    <div class="carousel-item">
-      <div class="card">
-        <div class="card-header logoleft text-primary text-center">
-            <h4 class="logoright text-muted">What aspect of yourself do you feel most grateful for?</span></h4>
-        </div>
-        <div class="card-body">
-            <form id="survey05">
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block gatherData surveyQ " value="1">My well endowed intellect</button>
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block gatherData surveyQ " value="2">My strong faith and belief</button>
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block gatherData surveyQ " value="3">My loyal and dependable pet/s</button>
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block gatherData surveyQ " value="4">My great circle of friends and fam</button>
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block gatherData surveyQ " value="5">My just being alive every day</button>                    
-            </form>
-        </div>
-      </div>
-    </div>
-
-
-
   </div>
+  <div class="col-md-3"></div>
 </div>
+
+
+<!-- MODALS -->
+
+<div class="modal fade bgstyle" id="pairingModey" tabindex="-1" data-keyboard="false" data-backdrop="static" style="background-image: url('https://source.unsplash.com/3skLpaOBlMw/1920x1080');">
+  <!-- mA_lknGurfc -->
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">            
+            <div class="moda-header">
+              <h3 class="modal-title logoright text-center text-white">MEET YOUR <span class="text-primary logoleft">NEW</span><span class="text-warning">FRIENDS</span>!</h3>
+            </div>   
+            <div class="modal-body text-center">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active text-white logoleft">
+                        <div id="newfriendPic1"><img src="https://www.gotceleb.com/wp-content/uploads/photos/olivia-munn/by-james-keivom-portraits-for-new-york-daily-news/Olivia-Munn:-New-York-Daily-News-Portraits-08-662x1031.jpg" width="200px" height="300px"/></div>
+                        <h3 id="newFriendMatch1">Olivia Wong</h3>
+                        <p id="newFriendDescription1">Olivia is smart, engaging and down to earth, she would love to meet people who loves to eat and enjoy superhero movies!</p>
+                        <br><br>
+                      </div>
+                      <div class="carousel-item text-white">
+                          <div id="newfriendPic2"><img src="http://www4.pictures.zimbio.com/gi/Zoe+Saldana+2012+NCLR+ALMA+Awards+Portraits+56iePUXg4VAl.jpg" width="200px" height="300px"/></div>
+                          <h3 id="newFriendMatch2">Zowe Saldina</h3>
+                          <p id="newFriendDescription2">Zowe loves her tight circle of friends, and would love to take you in the group!</p>
+                          <br><br>
+                        </div>
+                      <div class="carousel-item text-white">
+                          <div id="newfriendPic3"><img src="https://traviscallahan.files.wordpress.com/2011/03/sheen_shirt2_websafe.png" width="200px" height="300px"/></div>
+                          <h3 id="newFriendMatch3">Charlie Shone</h3>
+                          <p id="newFriendDescription3">Just like you, Charlie has a zest for life, he's funny and an adventure seeker!</p>
+                          <br><br>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+            </div>
+            <div class="modal-footer item-center">
+                <a href="/" class="btn btn-lg btn-outline-light btn-block logoright"><h3>Exit <span class="logoleft text-primary">friend</span><span class="logoright text-warning">Zone</span></h3></a>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="col-md-3"></div>
-</div>
+
+
+
   <!-- LATEST JQUERY AND BOOTSTRAP SCRIPT -->
   <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
-  $('.nextPlz').on('click', function() {
-      $('.carousel').carousel('next');
-  });
+$(document).ready(function() {
 
-// $.get('/api/friends', function(err, data) {
-//     console.log(`got data: ${data}`);
-// })
-  let scorez = [];
+    let friendName = '';
+    let scorez = [];
+    let picURL = '';
+    $('.nextPls').on('click', function() {
+      friendName = $("#friendName").val().trim();
+      picURL = $("#picURL").val().trim();
+      if (friendName.length > 2 || picURL.length > 2) {
+        $('.carousel').carousel('next');
+      } else { alert("Hey fill up the fields they're all required!"); }
+    });
 
-  $(".surveyQ").on("click", function(e) {
-        // console.log(`Question 1 Choice: ${scorez[0]});
-    scorez.push($(this).attr("value"));
-    console.log(`button clicked, selected: ${scorez[0]}`);
-  });
+    $('.nextPlz').on('click', function() {
+        $('.carousel').carousel('next');
+    });
+ 
+    $(".surveyQ").on("click", function(e) {
+          // console.log(`Question 1 Choice: ${scorez[0]});
+      scorez.push(parseInt($(this).attr("value")));
+      console.log(`button clicked, selected: ${scorez[0]}`);
+    });
 
 
-  $(".gatherData").on("click", function(event) {
+    $(".gatherData").on("click", function(event) {
       console.log("CONCLUDING TRANSMISSION");
       event.preventDefault();
-      alert("Thanks for the info, were processing your request");
-
-      
-      // for (let i=1; i<=2; i++) {
-      //   if (!isNaN(parseInt($(`#survey0${i} button:selected`).attr('value'))))
-      //   scorez.push(parseInt($(`#survey0${i} button:selected`).attr('value')));
-      // }
 
       let newFriend = {
-        "name": $("#friendName").val().trim(),
-        "photo": $("#picURL").val().trim(),
+        "name": friendName,
+        "photo": picURL,
         "scores": scorez
-            // parseInt($("#surveySays03 option:selected").attr('value')),
-            // parseInt($("#surveySays04 option:selected").attr('value')),
-            // parseInt($("#surveySays05 option:selected").attr('value'))
       };
-//       $('#update').click(function(){
-//   alert($('#options > li > a:selected').html())
-// });
 
-  console.log(`A new friend is created: ${newFriend}`);
-  alert(`A new friend is created: ${newFriend}`);
+      console.log(`A new friend is created: ${newFriend}`);
+      
+      $.post("/api/friends", newFriend, 
+        function(data) {
+          if (data) {
+              console.log("POST: friendZoned!");
+          } 
+      });
 
-  $.post("/api/friends", newFriend, 
-  function(data) {
+      $('.carousel').carousel('next');
+      
+      setTimeout(function() {
+        $('#pairingModey').modal('show');      
+      }, 5000);
 
-    if (data) {
-        alert("Yazzz! You are on the way to getting friendZoned!");
-    } 
-    // else {
-    //     alert("Sorry, something went wrong.");
-    // }
-    // $("#friendName").val("");
-    // $("#picURL").val("");
   });
-});
 
+});
 </script>
 
 </body>
