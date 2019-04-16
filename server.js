@@ -2,7 +2,7 @@ const express = require("express");
 
 //EXPRESS.js CONFIG
 const app = express();
-const PORT = process.env.PORT || 8081;
+const PORT = process.env.PORT || 8082;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
