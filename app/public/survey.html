@@ -30,6 +30,12 @@
         -o-background-size: cover;
         background-size: cover;
     }
+    #bg1 {
+      background-image: url('https://source.unsplash.com/S_VbdMTsdiA/1920x1080');
+    }
+    #bg2 {
+      background-image: url('https://source.unsplash.com/mA_lknGurfc/1920x1080');
+    }
 </style>
 
 
@@ -38,13 +44,13 @@
 <body>
 
 <!-- Navigation -->
- <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand text-primary logoleft" href="/">friend<span class="text-warning logoright">Zone</span></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
+      <div class="collapse navbar-collapse logoright" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
             <a class="nav-link" href="/">Home
@@ -58,16 +64,15 @@
             <a class="nav-link" href="api/friends">API View</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About The Developer</a>
+            <a class="nav-link" href="https://jetsetpanda.github.io/jetsetPanda/">About The Developer</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-<!-- EXPERIMENTAL -->
-<div class="row mt-5 pt-5 bgstyle" style="background-image: url('https://source.unsplash.com/S_VbdMTsdiA/1920x1080');">
-<!-- <div class="row mt-5 pt-5 bgstyle" style="background-image: url('https://source.unsplash.com/mA_lknGurfc/1920x1080');"> -->
+
+<div id="bg1" class="row mt-5 pt-5 bgstyle" >
   <div class="col-md-3"></div>
   <div class="col-md-6">
       <div id="friendSurvey" class="carousel slide" data-interval="false">
@@ -75,7 +80,7 @@
           <div class="carousel-item active">
               <div class="card">
                   <div class="card-header logoleft text-primary text-center">
-                      <h3>Tell Us <span class="logoright text-warning">About You</span></h3>
+                      <h3>Tell Us About<span class="logoright text-warning"> You</span></h3>
                   </div>
                   <div class="card-body text-light">
                     <form>
@@ -84,8 +89,12 @@
                           <input type="text" class="form-control logoleft" id="friendName" placeholder="Full Name or Nickname">
                       </div>
                       <div class="form-group logoright">
-                          <label for="picURL">Your Photo</label>
-                          <input type="text" class="form-control logoleft" id="picURL" placeholder="Insert Image Link Here">
+                          <label for="picURL">Your Photo Link</label>
+                          <input type="text" class="form-control logoleft" id="picURL" placeholder="Insert Image URL Link Here">
+                      </div>
+                      <div class="form-group logoright">
+                          <label for="descriptionz">Describe Yourself in the Third Person...</label>
+                          <textarea class="form-control logoleft" id="descriptionz" placeholder="He/She loves spaghetti dinners, midnight jogs, write haikus and catch up on the latest superhero flick..." rows="2"></textarea>
                       </div>
                     </form>
                   </div>
@@ -118,7 +127,7 @@
           <div class="carousel-item">
             <div class="card logoright">
                 <div class="card-header text-center">
-                  <h3 class=" text-light">Given a sizeable budget, what is your ideal getaway?</span></h3>
+                  <h4 class=" text-light">Given a sizeable budget, what's your ideal getaway?</span></h4>
               </div>
               <div class="card-body">
                   <form id="survey02">
@@ -135,7 +144,7 @@
           <div class="carousel-item">
             <div class="card logoright">
                 <div class="card-header text-center">
-                  <h4 class=" text-light">If you only have these pet choices on your next home, which one will it be?</span></h4>
+                  <h4 class=" text-light">Which of these cuddly pets would you adopt?</span></h4>
               </div>
               <div class="card-body">
                   <form id="survey03">
@@ -152,7 +161,7 @@
           <div class="carousel-item">
             <div class="card logoright">
                 <div class="card-header text-center">
-                  <h4 class=" text-light">Which of these prominent figures would you have dinner with?</span></h4>
+                  <h4 class=" text-light">Which of these prominent figures would you hang out with?</span></h4>
               </div>
               <div class="card-body">
                   <form id="survey04">
@@ -186,7 +195,7 @@
           <div class="carousel-item">
             <div class="card logoright">
               <div class="card-header text-left">
-                <h4 class="text-light">Thanks for your input!</span></h4>
+                <h4 class="text-light">Thanks for your input! Give us a sec or two...</span></h4>
               </div>
               <div class="card-body text-center">
                 <div>
@@ -226,27 +235,13 @@
                     <ol class="carousel-indicators">
                       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                      <!-- <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
                     </ol>
                     <div class="carousel-inner">
-                      <div class="carousel-item active text-white logoleft">
-                        <div id="newfriendPic1"><img src="https://www.gotceleb.com/wp-content/uploads/photos/olivia-munn/by-james-keivom-portraits-for-new-york-daily-news/Olivia-Munn:-New-York-Daily-News-Portraits-08-662x1031.jpg" width="200px" height="300px"/></div>
-                        <h3 id="newFriendMatch1">Olivia Wong</h3>
-                        <p id="newFriendDescription1">Olivia is smart, engaging and down to earth, she would love to meet people who loves to eat and enjoy superhero movies!</p>
-                        <br><br>
+                      <div id="friendMatch1" class="carousel-item active text-white logoleft">
                       </div>
-                      <div class="carousel-item text-white">
-                          <div id="newfriendPic2"><img src="http://www4.pictures.zimbio.com/gi/Zoe+Saldana+2012+NCLR+ALMA+Awards+Portraits+56iePUXg4VAl.jpg" width="200px" height="300px"/></div>
-                          <h3 id="newFriendMatch2">Zowe Saldina</h3>
-                          <p id="newFriendDescription2">Zowe loves her tight circle of friends, and would love to take you in the group!</p>
-                          <br><br>
-                        </div>
-                      <div class="carousel-item text-white">
-                          <div id="newfriendPic3"><img src="https://traviscallahan.files.wordpress.com/2011/03/sheen_shirt2_websafe.png" width="200px" height="300px"/></div>
-                          <h3 id="newFriendMatch3">Charlie Shone</h3>
-                          <p id="newFriendDescription3">Just like you, Charlie has a zest for life, he's funny and an adventure seeker!</p>
-                          <br><br>
-                        </div>
+                      <div id="friendMatch2" class="carousel-item text-white">
+                      </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -256,10 +251,10 @@
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="sr-only">Next</span>
                     </a>
-                  </div>
             </div>
+
             <div class="modal-footer item-center">
-                <a href="/" class="btn btn-lg btn-outline-light btn-block logoright"><h3>Exit <span class="logoleft text-primary">friend</span><span class="logoright text-warning">Zone</span></h3></a>
+                <a href="/" class="btn btn-lg btn-outline-light btn-block logoright"><h3><span class="logoleft text-primary">friend</span><span class="logoright text-warning">Zone</span> Home</h3></a>
             </div>
         </div>
     </div>
@@ -271,60 +266,87 @@
   <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
 <script type="text/javascript">
 $(document).ready(function() {
 
-    let friendName = '';
-    let scorez = [];
-    let picURL = '';
-    $('.nextPls').on('click', function() {
-      friendName = $("#friendName").val().trim();
-      picURL = $("#picURL").val().trim();
-      if (friendName.length > 2 || picURL.length > 2) {
-        $('.carousel').carousel('next');
-      } else { alert("Hey fill up the fields they're all required!"); }
-    });
+let friendName = '';
+let scorez = [];
+let description = '';
+let picURL = '';
+$('.nextPls').on('click', function() {
+  friendName = $("#friendName").val().trim();
+  picURL = $("#picURL").val().trim();
+  description = $("#descriptionz").val().trim();
+  if (friendName.length > 2 && picURL.length > 2 && description.length > 2) {
+    $('.carousel').carousel('next');
+  } else { alert("Hey fill up the fields they're all required!"); }
+});
 
-    $('.nextPlz').on('click', function() {
-        $('.carousel').carousel('next');
-    });
- 
-    $(".surveyQ").on("click", function(e) {
-          // console.log(`Question 1 Choice: ${scorez[0]});
-      scorez.push(parseInt($(this).attr("value")));
-      console.log(`button clicked, selected: ${scorez[0]}`);
-    });
+$('.nextPlz').on('click', function() {
+    $('.carousel').carousel('next');
+});
+
+$(".surveyQ").on("click", function(e) {
+      // console.log(`Question 1 Choice: ${scorez[0]});
+  scorez.push(parseInt($(this).attr("value")));
+  console.log(`button clicked, selected: ${scorez[0]}`);
+});
 
 
-    $(".gatherData").on("click", function(event) {
-      console.log("CONCLUDING TRANSMISSION");
-      event.preventDefault();
+$(".gatherData").on("click", function(event) {
+  console.log("CONCLUDING TRANSMISSION");
+  event.preventDefault();
 
-      let newFriend = {
-        "name": friendName,
-        "photo": picURL,
-        "scores": scorez
-      };
+  let newFriend = {
+    "name": friendName,
+    "photo": picURL,
+    "description": description,
+    "scores": scorez
+  };
 
-      console.log(`A new friend is created: ${newFriend}`);
-      
-      $.post("/api/friends", newFriend, 
-        function(data) {
-          if (data) {
-              console.log("POST: friendZoned!");
-          } 
-      });
-
-      $('.carousel').carousel('next');
-      
-      setTimeout(function() {
-        $('#pairingModey').modal('show');      
-      }, 5000);
-
+  console.log(`A new friend is created: ${newFriend}`);
+  
+  $.post("/api/friends", newFriend, 
+    function(data) {
+      if (data) {
+          console.log("POST: friendZoned!");
+      } 
   });
+  friendPair(newFriend);
+  
+});
+
+// PAIRING LOGIC --- you will be paired with a friend with the same choice as yours on question 5, and Charlie Shone....
+function friendPair(newFriend) {
+  $('.carousel').carousel('next');
+  
+  setTimeout(function() {
+  
+  let frand = newFriend;
+  let frandscore = parseInt(frand.scores[4]);
+  let plusfive = 5+frandscore;
+  console.log(frandscore + " five equals " + plusfive);
+
+  $.get("/api/friends", function(resp) {
+    if(resp) {
+      friendMatch = resp[frandscore];
+      tigerBlood = resp[0];
+      console.log("The winning friend is " + friendMatch.name);
+      alert("The winning friend is " + friendMatch.name);
+      let matchOneHTML = `<div><img src="${friendMatch.photo}" width="200px" height="300px"/></div><div><h3>${friendMatch.name}</h3></div><div><p>${friendMatch.description}</p></div><br><br>`;
+      let matchTwoHTML = `<div><img src="${tigerBlood.photo}" width="200px" height="300px"/></div><div><h3>${tigerBlood.name}</h3></div><div><p>${tigerBlood.description}</p></div><br><br>`;
+      $("#friendMatch1").append(matchOneHTML);
+      $("#friendMatch2").append(matchTwoHTML);
+    }
+  
+  })
+    $('#pairingModey').modal('show');      
+  }, 5000);
+
+}
 
 });
+  
 </script>
 
 </body>
