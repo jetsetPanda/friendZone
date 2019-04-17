@@ -97,6 +97,7 @@
                           <textarea class="form-control logoleft" id="descriptionz" placeholder="He/She loves spaghetti dinners, midnight jogs, write haikus and catch up on the latest superhero flick..." rows="2"></textarea>
                       </div>
                     </form>
+                    <p class="text-right text-muted logoright">*All Fields Required</p>
                   </div>
                   <div class="card-footer">
                     <a href="#" class="btn btn-primary btn-block nextPls">START <span class="logoleft text-warning">friend</span><span class="logoright text-warning">Quiz</span></a>
@@ -108,14 +109,14 @@
           <div class="carousel-item">
             <div class="card logoright">
               <div class="card-header text-center">
-                  <h4 class=" text-light">Which color gives you a warm feeling?</span></h4>
+                  <h4 class=" text-light">Which color gives you a warm and fuzzy feeling?</span></h4>
               </div>
               <div class="card-body">
                   <form id="survey01">
                       <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="1">Dollar Green</button>
-                      <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="2">Aquamarine</button>
+                      <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="2">Flamingo Pink</button>
                       <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="3">Ripe Peach</button>
-                      <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="4">Lilac</button>
+                      <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="4">Lavender</button>
                       <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="5">Ferrari Yellow</button>                    
                   </form>
               </div>
@@ -132,9 +133,9 @@
               <div class="card-body">
                   <form id="survey02">
                       <button type="button" class="btn btn-outline-info btn-lg btn-block nextPlz surveyQ " value="1">Invest the money instead and watch it grow baby!</button>
-                      <button type="button" class="btn btn-outline-info btn-lg btn-block nextPlz surveyQ " value="2">Join an expedition to Antarctica</button>
+                      <button type="button" class="btn btn-outline-info btn-lg btn-block nextPlz surveyQ " value="2">Join a research expedition to Antarctica</button>
                       <button type="button" class="btn btn-outline-info btn-lg btn-block nextPlz surveyQ " value="3">Do a top restaurant and wine tour of Europe</button>
-                      <button type="button" class="btn btn-outline-info btn-lg btn-block nextPlz surveyQ " value="4">Close down a theme park for you and yours</button>
+                      <button type="button" class="btn btn-outline-info btn-lg btn-block nextPlz surveyQ " value="4">Close down a theme park for you and your buddies</button>
                       <button type="button" class="btn btn-outline-info btn-lg btn-block nextPlz surveyQ " value="5">Luxury Private Island Escape</button>                    
                   </form>
               </div>
@@ -161,7 +162,7 @@
           <div class="carousel-item">
             <div class="card logoright">
                 <div class="card-header text-center">
-                  <h4 class=" text-light">Which of these prominent figures would you hang out with?</span></h4>
+                  <h4 class=" text-light">Which of these famed figures would you hang out with?</span></h4>
               </div>
               <div class="card-body">
                   <form id="survey04">
@@ -195,7 +196,7 @@
           <div class="carousel-item">
             <div class="card logoright">
               <div class="card-header text-left">
-                <h4 class="text-light">Thanks for your input! Give us a sec or two...</span></h4>
+                <h4 class="text-light text-center">Thanks for your input! Give us a sec or two...</span></h4>
               </div>
               <div class="card-body text-center">
                 <div>
@@ -331,8 +332,8 @@ function friendPair(newFriend) {
     if(resp) {
       friendMatch = resp[frandscore];
       tigerBlood = resp[0];
-      console.log("The winning friend is " + friendMatch.name);
-      alert("The winning friend is " + friendMatch.name);
+      console.log("The matched friend is " + friendMatch.name);
+      // alert("The winning friend is " + friendMatch.name);
       let matchOneHTML = `<div><img src="${friendMatch.photo}" width="200px" height="300px"/></div><div><h3>${friendMatch.name}</h3></div><div><p>${friendMatch.description}</p></div><br><br>`;
       let matchTwoHTML = `<div><img src="${tigerBlood.photo}" width="200px" height="300px"/></div><div><h3>${tigerBlood.name}</h3></div><div><p>${tigerBlood.description}</p></div><br><br>`;
       $("#friendMatch1").append(matchOneHTML);
