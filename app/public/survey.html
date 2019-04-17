@@ -8,11 +8,27 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round|Fredoka+One" rel="stylesheet">
 <style> 
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+    a#taste:hover {
+      /* taste teh rainbowz */
+      background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+      background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+      color:transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      }
+  
     .card {
       background-color: rgba(0, 0, 0, 0.205);
     }
     .modal-content {
-      background-color: rgba(0, 0, 0, 0.425);                                                                                        
+      background-color: rgba(0, 0, 0, 0.425);          
     }
     .logoleft {
       font-family: 'Varela Round', sans-serif;
@@ -21,7 +37,7 @@
       font-family: 'Fredoka One', cursive;
     }
     .bgstyle {
-        height: 93.5vh;
+        height: 100vh;
         width: 100%;
         min-height: 350px;
         background: no-repeat center center ;
@@ -30,11 +46,28 @@
         -o-background-size: cover;
         background-size: cover;
     }
-    #bg1 {
-      background-image: url('https://source.unsplash.com/S_VbdMTsdiA/1920x1080');
+    .bg1 {
+      background-image: url('/images/survey_bonfire.jpg');
     }
-    #bg2 {
-      background-image: url('https://source.unsplash.com/mA_lknGurfc/1920x1080');
+    .bg2 {
+      background-image: url('/images/survey_buddies.jpg');
+      transition: background 0.5s linear;
+      -webkit-transition: background 1.5s linear;
+    }
+    .bg3 {
+      background-image: url('/images/survey_pet.jpg');
+      transition: background 0.5s linear;
+      -webkit-transition: background 1.5s linear;
+    }
+    .bg4 {
+      background-image: url('/images/survey_dinner.jpg');
+      transition: background 0.5s linear;
+      -webkit-transition: background 1.5s linear;
+    }
+    .bg5 {
+      background-image: url('/images/survey_beach.jpg');
+      transition: background 0.5s linear;
+      -webkit-transition: background 1.5s linear;
     }
 </style>
 
@@ -44,7 +77,7 @@
 <body>
 
 <!-- Navigation -->
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+ <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand text-primary logoleft" href="/">friend<span class="text-warning logoright">Zone</span></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,9 +90,6 @@
                   <span class="sr-only">(current)</span>
                 </a>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="api/friends">API View</a>
           </li>
@@ -69,13 +99,17 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> -->
 
-
-<div id="bg1" class="row mt-5 pt-5 bgstyle" >
-  <div class="col-md-3"></div>
+  <!-- ORIG <div id="bg1" class="row mt-5 pt-5 bgstyle" > -->
+<div id="wallpaperz" class="row bg1 bgstyle" >
+  <div class="col-md-3">
+    <div class="logo-overlay ml-4 pl-4 mt-2 pt-2">
+        <h3><span class="text-primary logoleft">friend</span><span class="text-warning logoright">Zone</span></h3>
+    </div>    
+  </div>
   <div class="col-md-6">
-      <div id="friendSurvey" class="carousel slide" data-interval="false">
+      <div id="friendSurvey" class="carousel slide mt-5 pt-5" data-interval="false">
         <div class="carousel-inner">
           <div class="carousel-item active">
               <div class="card">
@@ -97,13 +131,13 @@
                           <textarea class="form-control logoleft" id="descriptionz" placeholder="He/She loves spaghetti dinners, midnight jogs, write haikus and catch up on the latest superhero flick..." rows="2"></textarea>
                       </div>
                     </form>
-                    <p class="text-right text-muted logoright">*All Fields Required</p>
+                    <p class="text-left text-muted logoright">*All Fields Required</p>
                   </div>
                   <div class="card-footer">
                     <a href="#" class="btn btn-primary btn-block nextPls">START <span class="logoleft text-warning">friend</span><span class="logoright text-warning">Quiz</span></a>
                   </div>
               </div>
-            <!-- <img class="d-block w-100" src="https://source.unsplash.com/nF8xhLMmg0c/1920x1080" alt="First slide"> -->
+            <!-- <img class="d-block w-100" src="https://source.unsplash.com/ISg37AI2A-s/1920x1080" alt="First slide"> -->
           </div>
       <!-- QUESTION 1 -->
           <div class="carousel-item">
@@ -111,13 +145,13 @@
               <div class="card-header text-center">
                   <h4 class=" text-light">Which color gives you a warm and fuzzy feeling?</span></h4>
               </div>
-              <div class="card-body">
+              <div class="card-body ">
                   <form id="survey01">
-                      <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="1">Dollar Green</button>
-                      <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="2">Flamingo Pink</button>
-                      <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="3">Ripe Peach</button>
-                      <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="4">Lavender</button>
-                      <button type="button" class="btn btn-outline-primary btn-lg btn-block nextPlz surveyQ " value="5">Ferrari Yellow</button>                    
+                      <button type="button" class="btn btn-outline-info btn-lg btn-block text-white nextPlz surveyQ " value="1">Dollar Green</button>
+                      <button type="button" class="btn btn-outline-info btn-lg btn-block text-white nextPlz surveyQ " value="2">Flamingo Pink</button>
+                      <button type="button" class="btn btn-outline-info btn-lg btn-block text-white nextPlz surveyQ " value="3">Ripe Peach</button>
+                      <button type="button" class="btn btn-outline-info btn-lg btn-block text-white nextPlz surveyQ " value="4">Lavender</button>
+                      <button type="button" class="btn btn-outline-info btn-lg btn-block text-white nextPlz surveyQ " value="5">Ferrari Yellow</button>                    
                   </form>
               </div>
             </div>
@@ -132,11 +166,11 @@
               </div>
               <div class="card-body">
                   <form id="survey02">
-                      <button type="button" class="btn btn-outline-info btn-lg btn-block nextPlz surveyQ " value="1">Invest the money instead and watch it grow baby!</button>
-                      <button type="button" class="btn btn-outline-info btn-lg btn-block nextPlz surveyQ " value="2">Join a research expedition to Antarctica</button>
-                      <button type="button" class="btn btn-outline-info btn-lg btn-block nextPlz surveyQ " value="3">Do a top restaurant and wine tour of Europe</button>
-                      <button type="button" class="btn btn-outline-info btn-lg btn-block nextPlz surveyQ " value="4">Close down a theme park for you and your buddies</button>
-                      <button type="button" class="btn btn-outline-info btn-lg btn-block nextPlz surveyQ " value="5">Luxury Private Island Escape</button>                    
+                      <button type="button" class="btn btn-outline-warning btn-lg btn-block text-white nextPlz surveyQ " value="1">Invest the money instead and watch it grow baby!</button>
+                      <button type="button" class="btn btn-outline-warning btn-lg btn-block text-white nextPlz surveyQ " value="2">Join a research expedition to Antarctica</button>
+                      <button type="button" class="btn btn-outline-warning btn-lg btn-block text-white nextPlz surveyQ " value="3">Do a top restaurant and wine tour of Europe</button>
+                      <button type="button" class="btn btn-outline-warning btn-lg btn-block text-white nextPlz surveyQ " value="4">Close down a major theme park for you and your buddies</button>
+                      <button type="button" class="btn btn-outline-warning btn-lg btn-block text-white nextPlz surveyQ " value="5">Luxury Private Island Escape</button>                    
                   </form>
               </div>
             </div>
@@ -149,11 +183,11 @@
               </div>
               <div class="card-body">
                   <form id="survey03">
-                      <button type="button" class="btn btn-outline-success btn-lg btn-block nextPlz surveyQ " value="1">Never had pets, never will</button>
-                      <button type="button" class="btn btn-outline-success btn-lg btn-block nextPlz surveyQ " value="2">Sphynx (hairless) Cat</button>
-                      <button type="button" class="btn btn-outline-success btn-lg btn-block nextPlz surveyQ " value="3">Hedgehog</button>
-                      <button type="button" class="btn btn-outline-success btn-lg btn-block nextPlz surveyQ " value="4">Afghan Hound</button>
-                      <button type="button" class="btn btn-outline-success btn-lg btn-block nextPlz surveyQ " value="5">Tarantula or Any Insect</button>                    
+                      <button type="button" class="btn btn-outline-success btn-lg btn-block text-white nextPlz surveyQ " value="1">Never had pets, never will</button>
+                      <button type="button" class="btn btn-outline-success btn-lg btn-block text-white nextPlz surveyQ " value="2">Sphynx (hairless) Cat</button>
+                      <button type="button" class="btn btn-outline-success btn-lg btn-block text-white nextPlz surveyQ " value="3">Hedgehog</button>
+                      <button type="button" class="btn btn-outline-success btn-lg btn-block text-white nextPlz surveyQ " value="4">Afghan Hound</button>
+                      <button type="button" class="btn btn-outline-success btn-lg btn-block text-white nextPlz surveyQ " value="5">Tarantula or Any Insect</button>                    
                   </form>
               </div>
             </div>
@@ -166,11 +200,11 @@
               </div>
               <div class="card-body">
                   <form id="survey04">
-                      <button type="button" class="btn btn-outline-danger btn-lg btn-block nextPlz surveyQ " value="1">Jared Kushner</button>
-                      <button type="button" class="btn btn-outline-danger btn-lg btn-block nextPlz surveyQ " value="2">Queen Elizabeth II</button>
-                      <button type="button" class="btn btn-outline-danger btn-lg btn-block nextPlz surveyQ " value="3">Dalai Lama</button>
-                      <button type="button" class="btn btn-outline-danger btn-lg btn-block nextPlz surveyQ " value="4">Maya Angelou</button>
-                      <button type="button" class="btn btn-outline-danger btn-lg btn-block nextPlz surveyQ " value="5">All of The Backstreet Boys</button>                    
+                      <button type="button" class="btn btn-outline-danger btn-lg btn-block text-white nextPlz surveyQ " value="1">Michael Jordan</button>
+                      <button type="button" class="btn btn-outline-danger btn-lg btn-block text-white nextPlz surveyQ " value="2">Queen Elizabeth II</button>
+                      <button type="button" class="btn btn-outline-danger btn-lg btn-block text-white nextPlz surveyQ " value="3">Dalai Lama</button>
+                      <button type="button" class="btn btn-outline-danger btn-lg btn-block text-white nextPlz surveyQ " value="4">Maya Angelou</button>
+                      <button type="button" class="btn btn-outline-danger btn-lg btn-block text-white nextPlz surveyQ " value="5">All of The Backstreet Boys</button>                    
                   </form>
               </div>
             </div>
@@ -179,15 +213,15 @@
           <div class="carousel-item">
             <div class="card logoright">
                 <div class="card-header text-center">
-                  <h4 class=" text-light">What aspect of yourself do you feel most grateful for?</span></h4>
+                  <h4 class=" text-light">What aspect of you do you feel most grateful for?</span></h4>
               </div>
               <div class="card-body">
                   <form id="survey05">
-                      <button type="button" class="btn btn-outline-warning btn-lg btn-block gatherData surveyQ " value="1">My well endowed intellect</button>
-                      <button type="button" class="btn btn-outline-warning btn-lg btn-block gatherData surveyQ " value="2">My strong faith and belief</button>
-                      <button type="button" class="btn btn-outline-warning btn-lg btn-block gatherData surveyQ " value="3">My loyal and dependable pet/s</button>
-                      <button type="button" class="btn btn-outline-warning btn-lg btn-block gatherData surveyQ " value="4">My great circle of friends</button>
-                      <button type="button" class="btn btn-outline-warning btn-lg btn-block gatherData surveyQ " value="5">My just being alive every day</button>                    
+                      <button type="button" class="btn btn-outline-primary btn-lg btn-block text-white gatherData surveyQ " value="1">My well endowed intellect</button>
+                      <button type="button" class="btn btn-outline-primary btn-lg btn-block text-white gatherData surveyQ " value="2">My strong faith and beliefs</button>
+                      <button type="button" class="btn btn-outline-primary btn-lg btn-block text-white gatherData surveyQ " value="3">My loyal and dependable pet/s</button>
+                      <button type="button" class="btn btn-outline-primary btn-lg btn-block text-white gatherData surveyQ " value="4">My great circle of friends</button>
+                      <button type="button" class="btn btn-outline-primary btn-lg btn-block text-white gatherData surveyQ " value="5">My just being alive every day</button>                    
                   </form>
               </div>
             </div>
@@ -201,7 +235,7 @@
               <div class="card-body text-center">
                 <div>
                   <h1 class="text-white">Getting Your <span class="text-primary">Friend </span><span class="text-warning">Matches</span></h1>
-                  <h7 class="text-muted">Please be patient, we're processing your responses to give you great matches!</h7>
+                  <h7 class="text-dark">Please be patient, we're processing your responses to give you great matches!</h7>
                 </div>
                 <div class="spinner-border text-primary text-center" style="width: 5rem; height: 5rem;" role="status">
                   <span class="sr-only">Loading...</span>
@@ -218,7 +252,13 @@
         </div>
       </div>
   </div>
-  <div class="col-md-3"></div>
+  <div class="col-md-3">
+    <div class="logoright mr-md-2 pr-md-2 mt-md-3 pt-md-3 text-light">
+      <a href="/" class="mr-3">Home  </a>
+      <a href="/api/friends" class="mr-3">API View  </a>
+      <a id="taste" href="https://jetsetpanda.github.io/jetsetPanda/">Developer Info</a>
+    </div>
+  </div>
 </div>
 
 
@@ -267,88 +307,7 @@
   <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-
-let friendName = '';
-let scorez = [];
-let description = '';
-let picURL = '';
-$('.nextPls').on('click', function() {
-  friendName = $("#friendName").val().trim();
-  picURL = $("#picURL").val().trim();
-  description = $("#descriptionz").val().trim();
-  if (friendName.length > 2 && picURL.length > 2 && description.length > 2) {
-    $('.carousel').carousel('next');
-  } else { alert("Hey fill up the fields they're all required!"); }
-});
-
-$('.nextPlz').on('click', function() {
-    $('.carousel').carousel('next');
-});
-
-$(".surveyQ").on("click", function(e) {
-      // console.log(`Question 1 Choice: ${scorez[0]});
-  scorez.push(parseInt($(this).attr("value")));
-  console.log(`button clicked, selected: ${scorez[0]}`);
-});
-
-
-$(".gatherData").on("click", function(event) {
-  console.log("CONCLUDING TRANSMISSION");
-  event.preventDefault();
-
-  let newFriend = {
-    "name": friendName,
-    "photo": picURL,
-    "description": description,
-    "scores": scorez
-  };
-
-  console.log(`A new friend is created: ${newFriend}`);
-  
-  $.post("/api/friends", newFriend, 
-    function(data) {
-      if (data) {
-          console.log("POST: friendZoned!");
-      } 
-  });
-  friendPair(newFriend);
-  
-});
-
-// PAIRING LOGIC --- you will be paired with a friend with the same choice as yours on question 5, and Charlie Shone....
-function friendPair(newFriend) {
-  $('.carousel').carousel('next');
-  
-  setTimeout(function() {
-  
-  let frand = newFriend;
-  let frandscore = parseInt(frand.scores[4]);
-  let plusfive = 5+frandscore;
-  console.log(frandscore + " five equals " + plusfive);
-
-  $.get("/api/friends", function(resp) {
-    if(resp) {
-      friendMatch = resp[frandscore];
-      tigerBlood = resp[0];
-      console.log("The matched friend is " + friendMatch.name);
-      // alert("The winning friend is " + friendMatch.name);
-      let matchOneHTML = `<div><img src="${friendMatch.photo}" width="200px" height="300px"/></div><div><h3>${friendMatch.name}</h3></div><div><p>${friendMatch.description}</p></div><br><br>`;
-      let matchTwoHTML = `<div><img src="${tigerBlood.photo}" width="200px" height="300px"/></div><div><h3>${tigerBlood.name}</h3></div><div><p>${tigerBlood.description}</p></div><br><br>`;
-      $("#friendMatch1").append(matchOneHTML);
-      $("#friendMatch2").append(matchTwoHTML);
-    }
-  
-  })
-    $('#pairingModey').modal('show');      
-  }, 5000);
-
-}
-
-});
-  
-</script>
+  <script src="scripts.js"></script>
 
 </body>
 </html>

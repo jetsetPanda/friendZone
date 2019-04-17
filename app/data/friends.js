@@ -3,7 +3,7 @@ let friendArray = [
     {
         "name": "Charlie Shone",
         "photo": "https://traviscallahan.files.wordpress.com/2011/03/sheen_shirt2_websafe.png",
-        "description": "Just like you, Charlie has a zest for life, he's funny and an adventure seeker! A true renaissance man with a high midichlorian count imbued in his tigerblood..",
+        "description": "Just like you, Charlie has a zest for life, he's funny and an adventure seeker! A true renaissance man with a high midichlorian count infused in his tigerblood...",
         "scores": [
             5,
             3,
@@ -27,7 +27,7 @@ let friendArray = [
     {
         "name": "Leandro Kreeves",
         "photo": "https://66.media.tumblr.com/903a59933ff75a7e758c14ac08bfa4ff/tumblr_n88nnwHU2Z1so3e0fo1_500.jpg",
-        "description": "A devout Buddhist, Leandro is all about mindfulness, Zen and being a devout vegan. If you're open to it, he can show you the path to enlightenment via healthy eats..",
+        "description": "A devout Buddhist, Leandro is all about mindfulness, Zen and being a fervent vegan. If you're open to it, he can show you the path to enlightenment via healthy eats..",
         "scores": [
             1,
             1,

@@ -4,6 +4,8 @@ $(document).ready(function() {
   let scorez = [];
   let description = '';
   let picURL = '';
+  let bgOld = 0;
+  let bgNew = 1;
   $('.nextPls').on('click', function() {
     friendName = $("#friendName").val().trim();
     picURL = $("#picURL").val().trim();
@@ -14,7 +16,13 @@ $(document).ready(function() {
   });
   
   $('.nextPlz').on('click', function() {
+      bgOld++;
+      console.log(`old bg${bgOld}`);
+      bgNew++;
+      console.log(`new bg${bgNew}`);
+      $("#wallpaperz").addClass(`bg${bgNew}`).removeClass(`bg${bgOld}`);
       $('.carousel').carousel('next');
+      // $('.theClassThatsThereNow').addClass('newClassWithYourStyles').removeClass('theClassThatsTherenow');
   });
   
   $(".surveyQ").on("click", function(e) {
@@ -48,7 +56,7 @@ $(document).ready(function() {
   });
   
   // PAIRING LOGIC --- you will be paired with a friend with the same choice as yours on question 5, and Charlie Shone....
-  function friendPair(newFriend) {
+  const friendPair = (newFriend) => {
     $('.carousel').carousel('next');
     
     setTimeout(function() {
@@ -56,14 +64,14 @@ $(document).ready(function() {
     let frand = newFriend;
     let frandscore = parseInt(frand.scores[4]);
     let plusfive = 5+frandscore;
-    console.log(frandscore + " five equals " + plusfive);
+    console.log(frandscore + " five equals " + plusfive); //just testing if the parseInt Int parsing works..
   
     $.get("/api/friends", function(resp) {
       if(resp) {
         friendMatch = resp[frandscore];
         tigerBlood = resp[0];
-        console.log("The winning friend is " + friendMatch.name);
-        alert("The winning friend is " + friendMatch.name);
+        console.log("The matched friend is " + friendMatch.name);
+        // alert("The winning friend is " + friendMatch.name);
         let matchOneHTML = `<div><img src="${friendMatch.photo}" width="200px" height="300px"/></div><div><h3>${friendMatch.name}</h3></div><div><p>${friendMatch.description}</p></div><br><br>`;
         let matchTwoHTML = `<div><img src="${tigerBlood.photo}" width="200px" height="300px"/></div><div><h3>${tigerBlood.name}</h3></div><div><p>${tigerBlood.description}</p></div><br><br>`;
         $("#friendMatch1").append(matchOneHTML);
@@ -77,3 +85,4 @@ $(document).ready(function() {
   }
   
   });
+    

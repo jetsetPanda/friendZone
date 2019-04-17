@@ -5,13 +5,15 @@ const app = express();
 const PORT = process.env.PORT || 8082;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(__dirname + 'public'));
-app.use('/scripts', express.static(__dirname + '/Scripts'));
-//ROUTER 
+
+//Static dir
+app.use(express.static("app/public"));
+
+//ROUTE declare 
 require("./app/routes/apiRoutes")(app);
 require("./app/routes/htmlRoutes")(app);
 
-//LISTENER
+//LISTENER config & notify
 app.listen(PORT, function() {
     console.log(`You're being friendZoned on PORT: ${PORT}`);
 });
