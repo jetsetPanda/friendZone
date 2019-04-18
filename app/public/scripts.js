@@ -12,7 +12,10 @@ $(document).ready(function() {
     description = $("#descriptionz").val().trim();
     if (friendName.length > 2 && picURL.length > 2 && description.length > 2) {
       $('.carousel').carousel('next');
-    } else { alert("Hey fill up the fields they're all required!"); }
+    } else { 
+      $('#errorModey').modal('show');
+    }  
+      // alert("Hey fill up the fields they're all required!"); }
   });
   
   $('.nextPlz').on('click', function() {
